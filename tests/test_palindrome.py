@@ -21,3 +21,7 @@ class MyTestCase(unittest.TestCase):
     def test_palindrome_long(self):
        long_s = "".join(["1" for _ in range(2000)])
        self.assertTrue(is_palindrome(long_s))  # this will trigger RecursionError if `is_palindrome` is not fixed
+    
+    def test_palindrome_false(self):
+        s="falsef"
+        self.assertFalse(is_palindrome(s))
